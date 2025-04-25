@@ -1,7 +1,12 @@
 package net.glitch.mc;
 
 import com.mojang.logging.LogUtils;
+import net.glitch.mc.block.ModBlock;
+import net.glitch.mc.item.ModCreativeModeTabs;
+import net.glitch.mc.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,10 +30,15 @@ public class McCourseMod
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-
     public McCourseMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        //REGISTER stuff
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlock.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -51,7 +61,14 @@ public class McCourseMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.ALEXANDRITE);
+            event.accept(ModItems.RAW_ALEXANDRITE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlock.ALEXANDRITE_BLOCK);
+            event.accept(ModBlock.RAW_ALEXANDRITE_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
