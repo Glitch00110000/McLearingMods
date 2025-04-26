@@ -68,6 +68,7 @@ public class McCourseMod
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlock.ALEXANDRITE_BLOCK);
             event.accept(ModBlock.RAW_ALEXANDRITE_BLOCK);
+            
         }
     }
 
