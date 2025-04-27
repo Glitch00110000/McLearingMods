@@ -21,6 +21,7 @@ public class ModCreativeModeTabs
                     .displayItems((displayParameters, output) ->{
                                 output.accept(ModItems.ALEXANDRITE.get());
                                 output.accept(ModItems.RAW_ALEXANDRITE.get());
+                                output.accept(ModItems.METAL_DETECTOR.get());
 
                                 output.accept(ModBlock.ALEXANDRITE_BLOCK.get());
                                 output.accept(ModBlock.RAW_ALEXANDRITE_BLOCK.get());

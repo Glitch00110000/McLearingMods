@@ -1,6 +1,7 @@
 package net.glitch.mc.item;
 
 import net.glitch.mc.McCourseMod;
+import net.glitch.mc.item.custom.MetalDetectorItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,9 @@ public class ModItems
 
     public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(512)));
 
 
 
