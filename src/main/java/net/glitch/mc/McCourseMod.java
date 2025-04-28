@@ -28,7 +28,7 @@ public class McCourseMod
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "mccourse";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public McCourseMod()
     {
@@ -61,14 +61,16 @@ public class McCourseMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        {
             event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
         }
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
             event.accept(ModBlock.ALEXANDRITE_BLOCK);
             event.accept(ModBlock.RAW_ALEXANDRITE_BLOCK);
-            
+
         }
     }
 

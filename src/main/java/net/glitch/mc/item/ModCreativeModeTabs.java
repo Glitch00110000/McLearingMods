@@ -18,22 +18,26 @@ public class ModCreativeModeTabs
     public static final RegistryObject<CreativeModeTab> COURSE_TAB = CREATIVE_MODE_TABS.register("course_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
                     .title(Component.translatable("creativetab.course_tab"))
-                    .displayItems((displayParameters, output) ->{
-                                output.accept(ModItems.ALEXANDRITE.get());
-                                output.accept(ModItems.RAW_ALEXANDRITE.get());
-                                output.accept(ModItems.METAL_DETECTOR.get());
+                    .displayItems((displayParameters, output) ->
+                    {
+                        output.accept(ModItems.ALEXANDRITE.get());
+                        output.accept(ModItems.RAW_ALEXANDRITE.get());
+                        output.accept(ModItems.METAL_DETECTOR.get());
+                        output.accept(ModItems.KOHLRABI.get());
 
-                                output.accept(ModBlock.ALEXANDRITE_BLOCK.get());
-                                output.accept(ModBlock.RAW_ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlock.SOUND_BLOCK.get());
+                        output.accept(ModBlock.ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlock.RAW_ALEXANDRITE_BLOCK.get());
 
-                                output.accept(ModBlock.ALEXANDRITE_ORE.get());
-                                output.accept(ModBlock.NETHER_ALEXANDRITE_ORE.get());
-                                output.accept(ModBlock.END_STONE_ALEXANDRITE_ORE.get());
-                                output.accept(ModBlock.DEEPSLATE_ALEXANDRITE_ORE.get());
+                        output.accept(ModBlock.ALEXANDRITE_ORE.get());
+                        output.accept(ModBlock.NETHER_ALEXANDRITE_ORE.get());
+                        output.accept(ModBlock.END_STONE_ALEXANDRITE_ORE.get());
+                        output.accept(ModBlock.DEEPSLATE_ALEXANDRITE_ORE.get());
                     }).build());
 
 
-    public static void register(IEventBus eventBus){
+    public static void register(IEventBus eventBus)
+    {
         CREATIVE_MODE_TABS.register(eventBus);
     }
 }
