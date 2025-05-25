@@ -3,9 +3,7 @@ package net.glitch.mc.datagen;
 import net.glitch.mc.McCourseMod;
 import net.glitch.mc.block.ModBlock;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -37,9 +35,14 @@ public class ModBlockStateProvider extends BlockStateProvider
 
         slabBlock(((SlabBlock) ModBlock.ALEXANDRITE_SLAB.get()), blockTexture(ModBlock.ALEXANDRITE_BLOCK.get()), blockTexture(ModBlock.ALEXANDRITE_BLOCK.get()));
 
+        buttonBlock((ButtonBlock) ModBlock.ALEXANDRITE_BUTTON.get(), blockTexture(ModBlock.ALEXANDRITE_BLOCK.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlock.ALEXANDRITE_PRESSURE_PLATE.get(), blockTexture(ModBlock.ALEXANDRITE_BLOCK.get()));
+
+
         blockItem(ModBlock.ALEXANDRITE_STAIRS);
         blockItem(ModBlock.ALEXANDRITE_SLAB);
 
+        blockItem(ModBlock.ALEXANDRITE_PRESSURE_PLATE);
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject)

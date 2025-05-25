@@ -17,5 +17,7 @@
   "creativetab.course_tab": "Course Tab",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables",
   "tooltip.mccourse.metal_detector.tooltip": "Press §eSHIFT§r fo more Information",
-  "tooltip.mccourse.sound_block.tooltip": "Plays nice sounds when clicking, terrifing sounds when stepped on"
+  "tooltip.mccourse.sound_block.tooltip": "Plays nice sounds when clicking, terrifying sounds when stepped on",
+  "block.mccourse.alexandrite_pressure_plate": "Alexandrite Pressure Plate",
+  "block.mccourse.alexandrite_button": "Alexandrite Button"
 }
