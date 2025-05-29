@@ -48,6 +48,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider
                 ModBlock.END_STONE_ALEXANDRITE_ORE.get(),
                 ModBlock.ALEXANDRITE_STAIRS.get(),
                 ModBlock.ALEXANDRITE_SLAB.get());
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlock.ALEXANDRITE_FENCE.get());
+        this.tag(BlockTags.WALLS)
+                .add(ModBlock.ALEXANDRITE_WALL.get());
+        this.tag(BlockTags.FENCES)
+                .add(ModBlock.ALEXANDRITE_FENCE_GATE.get());
     }
 
     @Override
