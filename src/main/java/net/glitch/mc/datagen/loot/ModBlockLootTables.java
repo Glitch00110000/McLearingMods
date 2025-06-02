@@ -38,6 +38,8 @@ public class ModBlockLootTables extends BlockLootSubProvider
 
         this.add(ModBlock.ALEXANDRITE_SLAB.get(), block -> createSlabItemTable(ModBlock.ALEXANDRITE_SLAB.get()));
 
+        this.add(ModBlock.ALEXANDRITE_DOOR.get(), block -> createDoorTable(ModBlock.ALEXANDRITE_DOOR.get()));
+
         this.dropSelf(ModBlock.ALEXANDRITE_STAIRS.get());
 
         this.dropSelf(ModBlock.ALEXANDRITE_PRESSURE_PLATE.get());
@@ -46,6 +48,8 @@ public class ModBlockLootTables extends BlockLootSubProvider
         this.dropSelf(ModBlock.ALEXANDRITE_FENCE.get());
         this.dropSelf(ModBlock.ALEXANDRITE_FENCE_GATE.get());
         this.dropSelf(ModBlock.ALEXANDRITE_WALL.get());
+
+        this.dropSelf(ModBlock.ALEXANDRITE_TRAPDOOR.get());
 
     }
 

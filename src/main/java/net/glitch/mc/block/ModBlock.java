@@ -62,8 +62,6 @@ public class ModBlock
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_SLAB).sound(SoundType.METAL),
                     BlockSetType.IRON, 20, true));
 
-
-    // Fence fence gates Walls
     public static final RegistryObject<Block> ALEXANDRITE_FENCE = registerBlock("alexandrite_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
@@ -74,6 +72,14 @@ public class ModBlock
     public static final RegistryObject<Block> ALEXANDRITE_WALL = registerBlock("alexandrite_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
 
+
+    public static final RegistryObject<Block> ALEXANDRITE_DOOR = registerBlock("alexandrite_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    , BlockSetType.IRON));
+
+    public static final RegistryObject<Block> ALEXANDRITE_TRAPDOOR = registerBlock("alexandrite_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL), BlockSetType.IRON));
+                    
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

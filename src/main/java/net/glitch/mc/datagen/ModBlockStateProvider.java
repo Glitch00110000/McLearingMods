@@ -7,6 +7,8 @@ import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.earlydisplay.ElementShader;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -41,6 +43,9 @@ public class ModBlockStateProvider extends BlockStateProvider
         fenceGateBlock((FenceGateBlock) ModBlock.ALEXANDRITE_FENCE_GATE.get(), blockTexture(ModBlock.ALEXANDRITE_BLOCK.get()));
         wallBlock((WallBlock) ModBlock.ALEXANDRITE_WALL.get(), blockTexture(ModBlock.ALEXANDRITE_BLOCK.get()));
 
+        doorBlockWithRenderType((DoorBlock) ModBlock.ALEXANDRITE_DOOR.get(), modLoc("block/alexandrite_door_bottom"), modLoc("block/alexandrite_door_top"), "cutout");
+
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlock.ALEXANDRITE_TRAPDOOR.get(), modLoc("block/alexandrite_trapdoor"), true, "cutout");
 
         blockItem(ModBlock.ALEXANDRITE_STAIRS);
         blockItem(ModBlock.ALEXANDRITE_SLAB);
@@ -48,6 +53,14 @@ public class ModBlockStateProvider extends BlockStateProvider
         blockItem(ModBlock.ALEXANDRITE_PRESSURE_PLATE);
 
         blockItem(ModBlock.ALEXANDRITE_FENCE_GATE);
+
+
+        blockItem(ModBlock.ALEXANDRITE_TRAPDOOR, "_bottom");
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix)
+    {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("mccourse:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject)
