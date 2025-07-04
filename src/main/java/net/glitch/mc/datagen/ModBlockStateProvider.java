@@ -47,6 +47,9 @@ public class ModBlockStateProvider extends BlockStateProvider
 
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlock.ALEXANDRITE_TRAPDOOR.get(), modLoc("block/alexandrite_trapdoor"), true, "cutout");
 
+        pressurePlateBlock((PressurePlateBlock) ModBlock.ALEXANDRITE_PRESSURE_PLATE.get(), blockTexture(ModBlock.ALEXANDRITE_BLOCK.get()));
+
+
         blockItem(ModBlock.ALEXANDRITE_STAIRS);
         blockItem(ModBlock.ALEXANDRITE_SLAB);
 

@@ -47,7 +47,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider
                 ModBlock.DEEPSLATE_ALEXANDRITE_ORE.get(),
                 ModBlock.END_STONE_ALEXANDRITE_ORE.get(),
                 ModBlock.ALEXANDRITE_STAIRS.get(),
-                ModBlock.ALEXANDRITE_SLAB.get());
+                ModBlock.ALEXANDRITE_SLAB.get()
+        );
+
+        this.tag(ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL).add(
+                ModBlock.NETHER_ALEXANDRITE_ORE.get(),
+                ModBlock.END_STONE_ALEXANDRITE_ORE.get()
+        );
+
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlock.ALEXANDRITE_FENCE.get());

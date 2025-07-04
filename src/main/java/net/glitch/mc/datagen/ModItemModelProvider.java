@@ -29,6 +29,12 @@ public class ModItemModelProvider extends ItemModelProvider
         simpleItem(ModItems.KOHLRABI);
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.PEAT_BRICK);
+        handheldItem(ModItems.ALEXANDRITE_SWORD);
+        handheldItem(ModItems.ALEXANDRITE_PICKAXE);
+        handheldItem(ModItems.ALEXANDRITE_SHOVEL);
+        handheldItem(ModItems.ALEXANDRITE_AXE);
+        handheldItem(ModItems.ALEXANDRITE_HOE);
+
 
         buttonItem(ModBlock.ALEXANDRITE_BUTTON, ModBlock.ALEXANDRITE_BLOCK);
 
@@ -36,6 +42,13 @@ public class ModItemModelProvider extends ItemModelProvider
         wallItem(ModBlock.ALEXANDRITE_WALL, ModBlock.ALEXANDRITE_BLOCK);
 
         simpleBlockItem(ModBlock.ALEXANDRITE_DOOR);
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item)
+    {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(McCourseMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock)
