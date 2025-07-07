@@ -2,6 +2,7 @@ package net.glitch.mc.item;
 
 import net.glitch.mc.McCourseMod;
 import net.glitch.mc.item.custom.FuelItem;
+import net.glitch.mc.item.custom.HammerItem;
 import net.glitch.mc.item.custom.MetalDetectorItem;
 import net.glitch.mc.item.custom.PaxelItem;
 import net.minecraft.world.food.FoodProperties;
@@ -47,6 +48,11 @@ public class ModItems
 
     public static final RegistryObject<Item> ALEXANDRITE_PAXEL = ITEMS.register("alexandrite_paxel",
             () -> new PaxelItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
+
+
+    public static final RegistryObject<Item> ALEXANDRITE_HAMMER = ITEMS.register("alexandrite_hammer",
+            () -> new HammerItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
+
 
     public static void register(IEventBus eventBus)
     {
