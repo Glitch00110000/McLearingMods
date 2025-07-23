@@ -1,4 +1,4 @@
-package net.kaupenjoe.mccourse.event;
+package net.glitch.mc.event;
 
 
 import net.glitch.mc.McCourseMod;
